@@ -1,0 +1,38 @@
+﻿<Window x:Class="MP3_Sniper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MP3_Sniper"
+        mc:Ignorable="d"
+        Title="MP3 Sniper" Height="600" Width="573" Loaded="Window_Loaded" Background="#FF333638" MinWidth="600" MinHeight="600" MaxWidth="600" Icon="mp3sniper_icon.ico">
+    <Grid Margin="0">
+        <Menu x:Name="FileMenu" DockPanel.Dock="Top" Height="20" VerticalAlignment="Top">
+            <MenuItem Header="File">
+                <Separator />
+                <MenuItem Header="Exit" Click="ExitMenuItem_Click" />
+            </MenuItem>
+            <MenuItem Header="Edit">
+            </MenuItem>
+            <MenuItem Header="Help">
+                <MenuItem Header="GitHub" Click="GitMenuItem_Click" />
+                <Separator />
+            </MenuItem>
+        </Menu>
+        <Slider x:Name="FrameSlider" Margin="104,0,94,82" VerticalAlignment="Bottom" Minimum="1" Maximum="5000" IsSnapToTickEnabled="True" TickFrequency="1" ValueChanged="FrameSlider_ValueChanged" Foreground="#FF040404" Value="1200"/>
+        <DataGrid x:Name="FileDataGrid" Margin="10,160,10,188" Background="#FF040404" MinHeight="185" SelectionChanged="FileDataGrid_SelectionChanged" SelectionMode="Single" IsReadOnly="True"/>
+        <Button x:Name="StartButton" Content="Execute" Margin="10,0,293,10" VerticalAlignment="Bottom" Click="StartButton_Click" Height="31"/>
+        <TextBox x:Name="OutputPathTextBox" Height="23" Margin="104,0,39,141" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Background="#FF060606" Foreground="White"/>
+        <Label Content="Output Path" HorizontalAlignment="Left" Margin="11,0,0,141" VerticalAlignment="Bottom" Foreground="White"/>
+        <Button x:Name="PathSelectorButton" Content="..." Margin="0,0,9,141" Height="23" Click="PathSelectorButton_Click" Width="25" VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+        <Label Content="Frames" HorizontalAlignment="Left" Margin="11,0,0,80" VerticalAlignment="Bottom" Foreground="White"/>
+        <TextBox x:Name="FrameTextBox" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Height="32" Margin="508,0,39,74" TextWrapping="Wrap" Text="1" VerticalAlignment="Bottom" IsReadOnly="True" Width="45" TextChanged="FrameTextBox_TextChanged" Foreground="White" Background="#FF0F0F0F" HorizontalAlignment="Center"/>
+        <ScrollBar x:Name="FrameScrollBar" Margin="0,0,9,74" ValueChanged="FrameScrollBar_ValueChanged" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="25" Value="5555555" SmallChange="1" Minimum="1" Maximum="9999999999" Height="32"/>
+        <GroupBox x:Name="DropBox" Header="Drop Items" Height="130" Margin="11,20,9,0" VerticalAlignment="Top" AllowDrop="True" DragEnter="GroupBox_DragEnter" Drop="GroupBox_Drop" Foreground="White" Background="#FF333638">
+            <Image Margin="227,0,227,2" Source="mp3sniper.png" Stretch="Fill" Opacity="0.5" Width="100" Height="100"/>
+        </GroupBox>
+        <Label x:Name="ExtensionLabel" Content="File Extension" HorizontalAlignment="Left" Margin="11,0,0,113" VerticalAlignment="Bottom" Foreground="White"/>
+        <TextBox x:Name="FileExtensionTextBox" Height="23" Margin="104,0,39,113" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Background="#FF060606" Foreground="White"/>
+        <Button x:Name="ClearButton" Content="Clean" Margin="305,0,9,10" VerticalAlignment="Bottom" Width="278" Height="31" Click="ClearButton_Click"/>
+    </Grid>
+</Window>

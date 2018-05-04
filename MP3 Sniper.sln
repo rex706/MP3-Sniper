@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MP3 Sniper", "MP3 Sniper\MP3 Sniper.csproj", "{D901F59C-DB28-47B3-8277-6893782FA18A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D901F59C-DB28-47B3-8277-6893782FA18A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D901F59C-DB28-47B3-8277-6893782FA18A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D901F59C-DB28-47B3-8277-6893782FA18A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D901F59C-DB28-47B3-8277-6893782FA18A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B7A62A8A-62EC-4ED0-993C-0FF2F2692F65}
+	EndGlobalSection
+EndGlobal
